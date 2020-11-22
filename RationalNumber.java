@@ -11,6 +11,7 @@ public class RationalNumber extends RealNumber{
     }
     denominator = deno;
     numerator = nume;
+    reduce();
   }
   public double getValue(){
     return 0.0;
@@ -41,5 +42,19 @@ public class RationalNumber extends RealNumber{
       b = r;
     }
     return a;
+  }
+
+  public void reduce(){
+    int commonF = gcd(Math.abs(numerator),denominator);
+    numerator = numerator / commonF;
+    denominator = denominator/commonF;
+  }
+
+  public RationalNumber multiply(RationalNumber other){
+    return new RationalNumber(numerator * other.getNumerator(), denominator * other.getDenominator());
+  }
+
+  public RationalNumber divide(RationalNumber other){
+    return multiply(other.reciprocal());
   }
 }
