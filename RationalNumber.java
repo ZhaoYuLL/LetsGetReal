@@ -30,4 +30,11 @@ public class RationalNumber extends RealNumber{
   public boolean equals(RationalNumber other){
     return(numerator==other.getNumerator() && denominator == other.getDenominator());
   }
+  public String toString(){
+    return numerator + "/" + denominator;
+  }
+
+  public static int gcd(int a, int b){
+
+  }
 }
