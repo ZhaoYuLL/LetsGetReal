@@ -20,5 +20,9 @@ public class RealNumber{
     double diff = (value-other.getValue())/value;
     return Math.abs(diff)<0.001;
   }
-
+  
+  public RealNumber add(RealNumber other){
+    RealNumber a = new RealNumber(value+other.getValue());
+    return a;
+  }
 }
