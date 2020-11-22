@@ -12,5 +12,15 @@ public class RationalNumber extends RealNumber{
     denominator = deno;
     numerator = nume;
   }
-  
+  public double getValue(){
+    return 0.0;
+  }
+  public int getNumerator(){
+    return numerator;
+  }
+
+  public int getDenominator(){
+    return denominator;
+  }
+
 }
