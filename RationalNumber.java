@@ -4,6 +4,7 @@ public class RationalNumber extends RealNumber{
     super(0.0);
     if(deno ==0){
       deno = 1;
+      nume = 0;
     }
     if(deno < 0){
       nume = -1*nume;
@@ -14,7 +15,7 @@ public class RationalNumber extends RealNumber{
     reduce();
   }
   public double getValue(){
-    return 0.0;
+    return (double)numerator/(double)denominator;
   }
   public int getNumerator(){
     return numerator;

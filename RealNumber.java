@@ -17,8 +17,8 @@ public class RealNumber{
     if (value == 0.0){
       return (other.getValue() == 0.0);
     }
-    double diff = (value-other.getValue())/value;
-    return Math.abs(diff)<0.001;
+    double diff = (value-other.getValue());
+    return Math.abs(diff)<=0.00001;
   }
 
   public RealNumber add(RealNumber other){
